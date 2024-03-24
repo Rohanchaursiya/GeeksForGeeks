@@ -39,17 +39,14 @@ class GFG {
 
 //User function Template for Java
 class Solution {
-    public Stack<Integer> insertAtBottom(Stack<Integer> St, int x) {
-        Stack<Integer> st=new Stack<>();
-        ArrayList<Integer> li=new ArrayList<>();
-        st.push(x);
-        while(!St.isEmpty()){
-            li.add(St.pop());
-        }
-        Collections.reverse(li);
-        for(int i=0;i<li.size();i++){
-            st.push(li.get(i));
-        }
-        return st;
+     public Stack<Integer> insertAtBottom(Stack<Integer> st, int x) {
+        Stack<Integer> stack1 = new Stack<>();
+        while (!st.isEmpty()) stack1.push(st.pop());
+        
+        stack1.push(x);
+        
+        Stack<Integer> stack2 = new Stack<>();
+        while (!stack1.isEmpty()) stack2.push(stack1.pop());
+        return stack2;
     }
 }
