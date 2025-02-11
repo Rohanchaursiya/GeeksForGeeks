@@ -98,7 +98,9 @@ class GfG {
             else
                 System.out.println("false");
             t--;
-        }
+        
+System.out.println("~");
+}
     }
 }
 
@@ -109,10 +111,10 @@ class GfG {
 
 class Solution {
     // Function to check whether a Binary Tree is BST or not.
-     boolean isBST(Node root) {
+    boolean isBST(Node root) {
+        // code here.
         return isValidBST(root, null, null);
     }
-
     private boolean isValidBST(Node node, Integer min, Integer max) {
         if (node == null)
             return true;
